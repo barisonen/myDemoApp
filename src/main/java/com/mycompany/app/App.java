@@ -13,7 +13,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static String comp(ArrayList<String> array1, ArrayList<Integer> array2, ArrayList<Integer> array3, ArrayList<Integer> array4)  {
+    public static String comp(ArrayList<String> array1, ArrayList<Double> array2, ArrayList<Double> array3, ArrayList<Double> array4)  {
     	ArrayList<String> ppl = new ArrayList<>();
 		int sum = 0;
 		for(int count = 0 ; count < array1.size() ; count++) {
@@ -52,10 +52,10 @@ public class App
 			String input2 = req.queryParams("input2");
           java.util.Scanner sc2 = new java.util.Scanner(input2);
           sc2.useDelimiter("[;\r\n]+");
-          java.util.ArrayList<Integer> inputList1 = new java.util.ArrayList<>();
+          java.util.ArrayList<Double> inputList1 = new java.util.ArrayList<>();
           while (sc2.hasNext())
           {
-            int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
+            int value = Double.parseInt(sc2.next().replaceAll("\\s",""));
             inputList1.add(value);
           }
           System.out.println(inputList1);
@@ -65,10 +65,10 @@ public class App
 					String input3 = req.queryParams("input3");
           java.util.Scanner sc3 = new java.util.Scanner(input3);
           sc3.useDelimiter("[;\r\n]+");
-          java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
+          java.util.ArrayList<Double> inputList2 = new java.util.ArrayList<>();
           while (sc3.hasNext())
           {
-            int value = Integer.parseInt(sc3.next().replaceAll("\\s",""));
+            int value = Double.parseInt(sc3.next().replaceAll("\\s",""));
             inputList2.add(value);
           }
           System.out.println(inputList2);
@@ -78,10 +78,10 @@ public class App
 							String input4 = req.queryParams("input4");
           java.util.Scanner sc4 = new java.util.Scanner(input4);
           sc4.useDelimiter("[;\r\n]+");
-          java.util.ArrayList<Integer> inputList3 = new java.util.ArrayList<>();
+          java.util.ArrayList<Double> inputList3 = new java.util.ArrayList<>();
           while (sc4.hasNext())
           {
-            int value = Integer.parseInt(sc4.next().replaceAll("\\s",""));
+            int value = Double.parseInt(sc4.next().replaceAll("\\s",""));
             inputList3.add(value);
           }
           System.out.println(inputList3);
@@ -103,7 +103,7 @@ public class App
 			
 		/*	
           String input2 = req.queryParams("input2").replaceAll("\\s","");
-          int input2AsInt = Integer.parseInt(input2);
+          int input2AsInt = Double.parseInt(input2);
 	
           boolean result = App.search(inputList, input2AsInt);
 		*/
