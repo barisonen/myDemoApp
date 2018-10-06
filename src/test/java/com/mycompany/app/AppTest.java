@@ -13,32 +13,6 @@ import junit.framework.TestCase;
 public class AppTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-   public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-
-    /**
-     * Rigourous Test :-)
-     */
- public void testApp()
-    {
-        assertTrue( true );
-    }
 	  public void controlAverage() {
       	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
@@ -81,6 +55,22 @@ public class AppTest
 	  	String part = new App().comp(array1, array2, array3, array4); 
       	assertFalse(!part.substring(39,41).equals("17"));
 	}
+
+   public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+ public void testApp()
+    {
+        assertTrue( true );
+    }
+
 
 
 }
