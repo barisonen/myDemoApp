@@ -15,14 +15,16 @@ public class App
 {
     public static String comp(ArrayList<String> array1, ArrayList<Integer> array2, ArrayList<Integer> array3, ArrayList<Integer> array4)  {
     	ArrayList<String> ppl = new ArrayList<>();
+		int sum = 0;
 		for(int count = 0 ; count < array1.size() ; count++) {
-			ppl.add(array1.get(count) + " : " + (array2.get(count) + array3.get(count) + array4.get(count))) ; 
+			ppl.add(array1.get(count) + " : " + (array2.get(count) + array3.get(count) + array4.get(count))) ;
+			sum = sum + array2.get(count) + array3.get(count) + array4.get(count));
 		}
 		String answer = "Total scores:\n";
 		for(int count = 0 ; count < ppl.size() ; count++) {
 			answer = answer + ppl.get(count) + "\n";	
 		}
-		return answer;
+		return answer + "Class average : " + (sum / array1.size());
     }
 
     public static void main(String[] args) {
