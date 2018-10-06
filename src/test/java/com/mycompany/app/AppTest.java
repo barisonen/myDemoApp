@@ -39,27 +39,48 @@ public class AppTest
     {
         assertTrue( true );
     }
-	  public void testFound() {
-      ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
-	  ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-	  ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
-	  ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
-      assertTrue(new App().comp(array1, array2, array3, array4).equals("Total scores: a : 3 b : 11 c : 13 d : 17 Class average : 11.0"));
+	  public void controlAverage() {
+      	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
+	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
+	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
+	  	String part = new App().comp(array1, array2, array3, array4); 
+      	assertTrue(part.substring(part.length()-4).equals("11.0"));
     }
-/*
-    public void testNotFound() {
-      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertFalse(new App().search(array, 5));
-    }
+	public void controlSumA() {
+	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
+	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
+	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
+	  	String part = new App().comp(array1, array2, array3, array4); 
+      	assertTrue(part.charAt(19) == '3');
+    
+	}
+	public void controlSumB() {
+	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
+	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
+	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
+	  	String part = new App().comp(array1, array2, array3, array4); 
+      	assertTrue(part.substring(25,27).equals("11"));
+    
+	}
+	public void controlSumC() {
+	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
+	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
+	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
+	  	String part = new App().comp(array1, array2, array3, array4); 
+      	assertTrue(part.substring(32,34).equals("13"));
+	}
+	public void controlSumD() {
+	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
+	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
+	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
+	  	String part = new App().comp(array1, array2, array3, array4); 
+      	assertFalse(!part.substring(39,41).equals("17"));
+	}
 
-    public void testEmptyArray() {
-      ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1));
-    }
-
-    public void testNull() {
-      assertFalse(new App().search(null, 1));
-    }
-*/
 
 }
