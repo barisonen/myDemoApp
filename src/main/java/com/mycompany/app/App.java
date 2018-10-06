@@ -81,7 +81,7 @@ public class App
           java.util.ArrayList<Double> inputList3 = new java.util.ArrayList<>();
           while (sc4.hasNext())
           {
-            int value = Double.parseInt(sc4.next().replaceAll("\\s",""));
+            double value = Double.parseInt(sc4.next().replaceAll("\\s",""));
             inputList3.add(value);
           }
           System.out.println(inputList3);
