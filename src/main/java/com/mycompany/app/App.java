@@ -24,7 +24,7 @@ public class App
 		for(int count = 0 ; count < ppl.size() ; count++) {
 			answer = answer + ppl.get(count) + "\n";	
 		}
-		return answer + "Class average : " + (sum / array1.size());
+		return answer + "Class average : " + (sum / (double)array1.size());
     }
 
     public static void main(String[] args) {
