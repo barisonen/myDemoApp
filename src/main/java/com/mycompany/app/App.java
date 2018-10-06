@@ -13,14 +13,12 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
-      System.out.println("inside search");
-      if (array == null) return false;
-
-      for (int elt : array) {
-        if (elt == e) return true;
-      }
-      return false;
+    public static String search(ArrayList<String> array1, ArrayList<Integer> array2, ArrayList<Integer> array3, ArrayList<Integer> array4)  {
+    	ArrayList<String> ppl = new ArrayList<>();
+		for(int count = 0 ; count < array1.size() ; count++) {
+			ppl.add(array1.get(count)); 
+		}
+		return ppl.toString();
     }
 
     public static void main(String[] args) {
@@ -35,10 +33,10 @@ public class App
           String input1 = req.queryParams("input1");
           java.util.Scanner sc1 = new java.util.Scanner(input1);
           sc1.useDelimiter("[;\r\n]+");
-          java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
+          java.util.ArrayList<String> inputList = new java.util.ArrayList<>();
           while (sc1.hasNext())
           {
-            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            String value = sc1.next().replaceAll("\\s","");
             inputList.add(value);
           }
           System.out.println(inputList);
@@ -94,7 +92,7 @@ public class App
 			
 			
 			
-			
+			String result = App.search(inputList, inputList1, inputList2, inputList3);
 			
 			
 		/*	
@@ -103,7 +101,7 @@ public class App
 	
           boolean result = App.search(inputList, input2AsInt);
 		*/
-			boolean result = true;
+			
 			
          Map map = new HashMap();
           map.put("result", result);
