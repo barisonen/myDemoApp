@@ -96,7 +96,7 @@ public class App
 			
 			
 			
-			String result = App.comp(inputList, inputList1, inputList2, inputList3) + "                       scores                             scores                        scores";
+			String result = App.comp(inputList, inputList1, inputList2, inputList3);
 			
 			
 		/*	
