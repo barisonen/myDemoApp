@@ -18,7 +18,7 @@ public class App
 		int sum = 0;
 		for(int count = 0 ; count < array1.size() ; count++) {
 			ppl.add(array1.get(count) + " : " + (array2.get(count) + array3.get(count) + array4.get(count))) ;
-			sum = sum + array2.get(count) + array3.get(count) + array4.get(count));
+			sum = sum + array2.get(count) + array3.get(count) + array4.get(count);
 		}
 		String answer = "Total scores:\n";
 		for(int count = 0 ; count < ppl.size() ; count++) {
