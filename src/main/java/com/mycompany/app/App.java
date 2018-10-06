@@ -100,15 +100,17 @@ public class App
 		/*	
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
-
+	
           boolean result = App.search(inputList, input2AsInt);
-
+		*/
+			boolean result = true;
+			
          Map map = new HashMap();
           map.put("result", result);
           return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
 
-		*/
+		
         get("/compute",
             (rq, rs) -> {
               Map map = new HashMap();
