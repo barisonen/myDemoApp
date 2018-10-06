@@ -13,12 +13,16 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static String search(ArrayList<String> array1, ArrayList<Integer> array2, ArrayList<Integer> array3, ArrayList<Integer> array4)  {
+    public static String comp(ArrayList<String> array1, ArrayList<Integer> array2, ArrayList<Integer> array3, ArrayList<Integer> array4)  {
     	ArrayList<String> ppl = new ArrayList<>();
 		for(int count = 0 ; count < array1.size() ; count++) {
-			ppl.add(array1.get(count)); 
+			ppl.add(array1.get(count) + " : " + (array2.get(count) + array3.get(count) + array4.get(count))) ; 
 		}
-		return ppl.toString();
+		String answer = "Total scores:\n";
+		for(int count = 0 ; count < ppl.size() ; count++) {
+			answer = answer + ppl.get(count) + "\n";	
+		}
+		return answer;
     }
 
     public static void main(String[] args) {
@@ -92,7 +96,7 @@ public class App
 			
 			
 			
-			String result = App.search(inputList, inputList1, inputList2, inputList3);
+			String result = App.comp(inputList, inputList1, inputList2, inputList3);
 			
 			
 		/*	
