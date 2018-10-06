@@ -40,7 +40,7 @@ public class AppTest
         assertTrue( true );
     }
 	  public void testFound() {
-      ArrayList<String> array1= new ArrayList<>(Arrays.asList(a, b, c, d));
+      ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 	  ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	  ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
 	  ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
