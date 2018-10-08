@@ -13,7 +13,7 @@ import junit.framework.TestCase;
 public class AppTest 
     extends TestCase
 {
-	  public void controlAverage() {
+	  public void testAverage() {
       	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
@@ -21,7 +21,7 @@ public class AppTest
 	  	String part = new App().comp(array1, array2, array3, array4); 
       	assertTrue(part.substring(part.length()-4).equals("11.0"));
     }
-	public void controlSumA() {
+	public void testSumA() {
 	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
@@ -30,7 +30,7 @@ public class AppTest
       	assertTrue(part.charAt(19) == '3');
     
 	}
-	public void controlSumB() {
+	public void testSumB() {
 	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
@@ -39,7 +39,7 @@ public class AppTest
       	assertTrue(part.substring(25,27).equals("11"));
     
 	}
-	public void controlSumC() {
+	public void testSumC() {
 	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
@@ -47,7 +47,7 @@ public class AppTest
 	  	String part = new App().comp(array1, array2, array3, array4); 
       	assertTrue(part.substring(32,34).equals("13"));
 	}
-	public void controlSumD() {
+	public void testSumD() {
 	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
 	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
