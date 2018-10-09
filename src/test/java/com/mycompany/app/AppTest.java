@@ -18,7 +18,7 @@ public class AppTest
 	  	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
 	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
-	  	String part = new App().comp(array1, array2, array3, array4); 
+	  	String part = new App().comp(array1, array2, array3, array4);
       	assertTrue(part.substring(part.length()-4).equals("11.0"));
     }
 	public void testSumA() {
@@ -27,7 +27,7 @@ public class AppTest
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
 	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
 	  	String part = new App().comp(array1, array2, array3, array4); 
-      	assertTrue(part.charAt(19) == '3');
+      	assertTrue(part.charAt(18) == '3');
     
 	}
 	public void testSumB() {
@@ -36,7 +36,7 @@ public class AppTest
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
 	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
 	  	String part = new App().comp(array1, array2, array3, array4); 
-      	assertTrue(part.substring(25,27).equals("11"));
+      	assertTrue(part.substring(24,26).equals("11"));
     
 	}
 	public void testSumC() {
@@ -45,7 +45,7 @@ public class AppTest
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
 	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
 	  	String part = new App().comp(array1, array2, array3, array4); 
-      	assertTrue(part.substring(32,34).equals("13"));
+      	assertTrue(part.substring(31,33).equals("13"));
 	}
 	public void testSumD() {
 	  	ArrayList<String> array1= new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
@@ -53,7 +53,7 @@ public class AppTest
 	  	ArrayList<Integer> array3 = new ArrayList<>(Arrays.asList(1, 3, 7, 4));
 	  	ArrayList<Integer> array4 = new ArrayList<>(Arrays.asList(1, 6, 3, 9));
 	  	String part = new App().comp(array1, array2, array3, array4); 
-      	assertFalse(!part.substring(39,41).equals("17"));
+      	assertFalse(!part.substring(38,40).equals("17"));
 	}
 
    public AppTest( String testName )
